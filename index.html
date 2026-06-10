@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>📝 Smart To-Do Planner</h1>
+            <p>Stay organized and boost your productivity</p>
+        </div>
+
+        <!-- Task Form -->
+        <div class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+            >
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="taskDate"
+                    placeholder="DD/MM/YYYY"
+>
+
+                <input
+                    type="time"
+                    id="taskTime"
+                >
+
+            </div>
+
+            <select id="taskPriority">
+
+                <option value="High">
+                    🔴 High Priority
+                </option>
+
+                <option value="Medium" selected>
+                    🟡 Medium Priority
+                </option>
+
+                <option value="Low">
+                    🟢 Low Priority
+                </option>
+
+            </select>
+
+            <button id="addTaskBtn">
+                ➕ Add Task
+            </button>
+
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="pending">
+                Pending
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+
+        </div>
+
+        <!-- Task List -->
+        <div id="taskList" class="task-list">
+
+            <!-- Tasks will be added here dynamically -->
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
